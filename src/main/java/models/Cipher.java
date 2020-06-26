@@ -1,5 +1,7 @@
 package models;
 
-class Cipher {
+public class Cipher {
+    public Cipher(String inputString ) {
 
+    }
 }
