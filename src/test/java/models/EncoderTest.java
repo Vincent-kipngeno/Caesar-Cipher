@@ -16,4 +16,10 @@ public class EncoderTest {
         Encoder testEncoder = new Encoder("A");
         assertEquals("L", testEncoder.encoderFunc());
     }
+
+    @Test
+    public void Encoder_shiftSingleWordLetters_string() {
+        Encoder testEncoder = new Encoder("ABCD");
+        assertEquals("LMNO", testEncoder.encoderFunc());
+    }
 }
