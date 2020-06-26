@@ -1,7 +1,12 @@
 package models;
 
 public class Cipher {
-    public Cipher(String inputString ) {
 
+    private String inputString;
+    private String encodedString;
+
+    public Cipher(String inputString ) {
+        this.inputString = inputString;
     }
+
 }
