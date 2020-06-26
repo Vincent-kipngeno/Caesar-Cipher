@@ -16,7 +16,13 @@ public class Encoder {
 
     public String encoderFunc(){
         String stringPassingEncoding = this.inputString;
-
+        for (int i = 0; i < stringPassingEncoding.length(); i++) {
+            int characterIndex = Arrays.binarySearch(alphabeticalLetters, stringPassingEncoding.charAt(i));
+            int nextCharacterIndex = characterIndex + key;
+            char charToBeEncoded = stringPassingEncoding.charAt(i);
+            char charForEncoding = alphabeticalLetters[nextCharacterIndex];
+            stringPassingEncoding = stringPassingEncoding.replaceAll(String.valueOf(charToBeEncoded), String.valueOf(charForEncoding));
+        }
         return stringPassingEncoding;
     }
 }
