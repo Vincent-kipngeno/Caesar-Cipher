@@ -15,6 +15,9 @@ public class Encoder {
     }
 
     public String encoderFunc(){
-        return "A";
+        String stringPassingEncoding = this.inputString;
+        String finalEncodedString = "L";
+
+        return finalEncodedString;
     }
 }
