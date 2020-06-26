@@ -12,26 +12,32 @@ public class EncoderTest {
     }
 
     @Test
-    public void EncoderFunc_shiftSingleLetterA_L() {
+    public void encoderFunc_shiftSingleLetterA_L() {
         Encoder testEncoder = new Encoder("A");
         assertEquals("L", testEncoder.encoderFunc());
     }
 
     @Test
-    public void EncoderFunc_shiftSingleWordLetters_LMNO() {
+    public void encoderFunc_shiftSingleWordLetters_LMNO() {
         Encoder testEncoder = new Encoder("ABCD");
         assertEquals("LMNO", testEncoder.encoderFunc());
     }
 
     @Test
-    public void EncoderFunc_shiftSingleWordLettersWithNonAlphabeticalLetters_L4MN() {
+    public void encoderFunc_shiftSingleWordLettersWithNonAlphabeticalLetters_L4MN() {
         Encoder testEncoder = new Encoder("A4BC");
         assertEquals("L4MN", testEncoder.encoderFunc());
     }
 
     @Test
-    public void EncoderFunc_shiftLettersWithIndexAbove14_C() {
+    public void encoderFunc_shiftLettersWithIndexAbove14_C() {
         Encoder testEncoder = new Encoder("R");
         assertEquals("C", testEncoder.encoderFunc());
+    }
+
+    @Test
+    public void encoderFunc_shiftLettersOfStatement_string() {
+        Encoder testEncoder = new Encoder("I am here");
+        assertEquals("T LX SACA", testEncoder.encoderFunc());
     }
 }

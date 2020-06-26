@@ -15,7 +15,7 @@ public class Encoder {
     }
 
     public String encoderFunc(){
-        String stringPassingEncoding = this.inputString;
+        String stringPassingEncoding = this.inputString.toUpperCase();
         int nextCharacterIndex = 0;
         for (int i = 0; i < stringPassingEncoding.length(); i++) {
             int characterIndex = Arrays.binarySearch(alphabeticalLetters, stringPassingEncoding.charAt(i));
