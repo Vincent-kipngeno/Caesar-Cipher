@@ -34,4 +34,9 @@ public class Encoder {
         }
         return stringPassingEncoding;
     }
+
+    public String getEncodedString() {
+        this.encodedString = encoderFunc();
+        return this.encodedString;
+    }
 }

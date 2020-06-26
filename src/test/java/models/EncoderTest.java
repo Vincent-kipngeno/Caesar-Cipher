@@ -40,4 +40,10 @@ public class EncoderTest {
         Encoder testEncoder = new Encoder("I am here");
         assertEquals("T LX SACA", testEncoder.encoderFunc());
     }
+
+    @Test
+    public void getEncodedString_testEncodedStringGetterFunc_L() {
+        Encoder testEncoder = new Encoder("A");
+        assertEquals("L", testEncoder.getEncodedString());
+    }
 }
