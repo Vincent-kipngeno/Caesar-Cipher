@@ -22,4 +22,10 @@ public class EncoderTest {
         Encoder testEncoder = new Encoder("ABCD");
         assertEquals("LMNO", testEncoder.encoderFunc());
     }
+
+    @Test
+    public void Encoder_shiftSingleWordLettersWithNonAlphabeticalLetters_string() {
+        Encoder testEncoder = new Encoder("A4BC");
+        assertEquals("L4MN", testEncoder.encoderFunc());
+    }
 }
