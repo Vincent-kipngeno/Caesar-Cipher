@@ -34,4 +34,10 @@ public class DecodeTest {
         Decode testDecoder = new Decode("K");
         assertEquals("Z", testDecoder.decoderFunc());
     }
+
+    @Test
+    public void getterFunc_getDecodedString_P() {
+        Decode testDecoder = new Decode("A");
+        assertEquals("P", testDecoder.getDecodedString());
+    }
 }

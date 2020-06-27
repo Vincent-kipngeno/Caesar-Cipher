@@ -34,4 +34,9 @@ public class Decode {
         }
         return stringPassingDecoding;
     }
+
+    public String getDecodedString() {
+        this.decodedString = decoderFunc();
+        return decodedString;
+    }
 }
