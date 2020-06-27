@@ -1,5 +1,7 @@
 package decode;
 
+import java.util.Arrays;
+
 public class Decode {
 
     private String encodedString;
@@ -12,6 +14,16 @@ public class Decode {
     }
 
     public String decoderFunc (){
-        return "A";
+        String stringPassingDecoding = this.encodedString;
+        int nextCharacterIndex = 0;
+        for (int i = 0; i < stringPassingDecoding.length(); i++) {
+            int characterIndex = Arrays.binarySearch(alphabeticalLetters, stringPassingDecoding.charAt(i));
+            nextCharacterIndex = characterIndex - key;
+            char charToBeDecoded = stringPassingDecoding.charAt(i);
+            char charForDecoding = alphabeticalLetters[nextCharacterIndex];
+            stringPassingDecoding = stringPassingDecoding.replaceAll(String.valueOf(charToBeDecoded), String.valueOf(charForDecoding));
+
+        }
+        return stringPassingDecoding;
     }
 }
