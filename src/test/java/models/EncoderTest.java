@@ -38,7 +38,19 @@ public class EncoderTest {
     @Test
     public void encoderFunc_shiftLettersOfStatement_string() {
         Encoder testEncoder = new Encoder("I am here");
-        assertEquals("T LX SACA", testEncoder.encoderFunc());
+        assertEquals("T LX SPCP", testEncoder.encoderFunc());
+    }
+
+    @Test
+    public void encoderFunc_replaceCharactersAtSpecificIndexOnlyToPreventReplacingAlreadyEncodedLetters_String() {
+        Encoder testEncoder = new Encoder("AL");
+        assertEquals("LW", testEncoder.encoderFunc());
+    }
+
+    @Test
+    public void encoderFunc_encodeAllAlphabeticalLetters_String() {
+        Encoder testEncoder = new Encoder("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        assertEquals("LMNOPQRSTUVWXYZABCDEFGHIJK", testEncoder.encoderFunc());
     }
 
     @Test
