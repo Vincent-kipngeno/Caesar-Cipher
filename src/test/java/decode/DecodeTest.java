@@ -16,4 +16,10 @@ public class DecodeTest {
         Decode testDecoder = new Decode("L");
         assertEquals("A", testDecoder.decoderFunc());
     }
+
+    @Test
+    public void decoderFunc_decodeWordWithMOreThanOneLetters_AB() {
+        Decode testDecoder = new Decode("LM");
+        assertEquals("AB", testDecoder.decoderFunc());
+    }
 }

@@ -12,6 +12,6 @@ public class Decode {
     }
 
     public String decoderFunc (){
-        return null;
+        return "A";
     }
 }
