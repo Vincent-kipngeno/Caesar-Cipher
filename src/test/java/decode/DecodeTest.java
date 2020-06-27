@@ -22,4 +22,10 @@ public class DecodeTest {
         Decode testDecoder = new Decode("LM");
         assertEquals("AB", testDecoder.decoderFunc());
     }
+
+    @Test
+    public void decoderFunc_passNonAlphabeticalCharacters_AB4() {
+        Decode testDecoder = new Decode("LM4");
+        assertEquals("AB4", testDecoder.decoderFunc());
+    }
 }
