@@ -36,6 +36,12 @@ public class DecodeTest {
     }
 
     @Test
+    public void decoderFunc_replaceCharactersAtSpecificIndexOnly_AP() {
+        Decode testDecoder = new Decode("LA");
+        assertEquals("AP", testDecoder.decoderFunc());
+    }
+
+    @Test
     public void getterFunc_getDecodedString_P() {
         Decode testDecoder = new Decode("A");
         assertEquals("P", testDecoder.getDecodedString());

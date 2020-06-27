@@ -28,9 +28,8 @@ public class Decode {
                 }
                 char charToBeDecoded = stringPassingDecoding.charAt(i);
                 char charForDecoding = alphabeticalLetters[nextCharacterIndex];
-                stringPassingDecoding = stringPassingDecoding.replaceAll(String.valueOf(charToBeDecoded), String.valueOf(charForDecoding));
+                stringPassingDecoding = stringPassingDecoding.substring(0, i) + charForDecoding + stringPassingDecoding.substring(i + 1);
             }
-
         }
         return stringPassingDecoding;
     }
