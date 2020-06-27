@@ -22,14 +22,13 @@ public class Encoder {
             if (characterIndex == -1) {
                 continue;
             } else{
-                if (characterIndex < 14) {
+                if (characterIndex <= 14) {
                     nextCharacterIndex = characterIndex + key;
                 } else {
                     nextCharacterIndex = (characterIndex + key) - 26;
                 }
-                char charToBeEncoded = stringPassingEncoding.charAt(i);
                 char charForEncoding = alphabeticalLetters[nextCharacterIndex];
-                stringPassingEncoding = stringPassingEncoding.replaceAll(String.valueOf(charToBeEncoded), String.valueOf(charForEncoding));
+                stringPassingEncoding = stringPassingEncoding.substring(0, i) + charForEncoding + stringPassingEncoding.substring(i + 1);
             }
         }
         return stringPassingEncoding;
