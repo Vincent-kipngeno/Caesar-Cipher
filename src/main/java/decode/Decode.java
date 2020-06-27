@@ -21,7 +21,11 @@ public class Decode {
             if (characterIndex == -1) {
                 continue;
             } else{
-                nextCharacterIndex = characterIndex - key;
+                if (characterIndex >= key) {
+                    nextCharacterIndex = characterIndex - key;
+                } else {
+                    nextCharacterIndex = 26 - (key - characterIndex);
+                }
                 char charToBeDecoded = stringPassingDecoding.charAt(i);
                 char charForDecoding = alphabeticalLetters[nextCharacterIndex];
                 stringPassingDecoding = stringPassingDecoding.replaceAll(String.valueOf(charToBeDecoded), String.valueOf(charForDecoding));

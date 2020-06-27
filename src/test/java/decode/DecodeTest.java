@@ -28,4 +28,10 @@ public class DecodeTest {
         Decode testDecoder = new Decode("LM4");
         assertEquals("AB4", testDecoder.decoderFunc());
     }
+
+    @Test
+    public void decoderFunc_charactersWithIndexLessThanTheKey_Z() {
+        Decode testDecoder = new Decode("K");
+        assertEquals("Z", testDecoder.decoderFunc());
+    }
 }
