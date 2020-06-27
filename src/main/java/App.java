@@ -14,7 +14,7 @@ public class App{
         String encodedStatement = statementEncoder.getEncodedString();
         Decode statementDecoder = new Decode(encodedStatement);
         String decodedStatement = statementDecoder.getDecodedString();
-        System.out.println(statementToEncode);
+        System.out.println(statementToEncode.toUpperCase());
         System.out.println(encodedStatement);
         System.out.println(decodedStatement);
     }
