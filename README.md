@@ -10,6 +10,10 @@ This app takes in input string from the user converts it to upperCase, encodes i
 * Have java installed in your laptop
 * Fork and clone it to your local git repository. 
 * git clone https://github.com/Vincent-kipngeno/Caesar-Cipher.git
+* Navigate to src/main/java 
+* Run the command $ javac App.java && java App to build and run the app
+* To run the tests: Open the test you want to run right click and click Run 'Test'.
+
 ## Known Bugs
 There are no know bugs yet but incase you come across one please feel free to contribute in debugging it and create a pull request.
 ## Technologies Used
